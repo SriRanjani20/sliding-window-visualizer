@@ -1,12 +1,32 @@
 import streamlit as st
 import time
+from collections import Counter
 
-# Title animation
+st.set_page_config(page_title="Mini Apps Hub", layout="centered")
+
+# ---------------- Title Animation ----------------
 def animated_title(title, delay=0.15):
     st.markdown(f"<h1 style='text-align: center; color: #6c63ff;'>{title}</h1>", unsafe_allow_html=True)
     time.sleep(delay)
 
-# Palindrome Checker
+# ---------------- Anagram Checker ----------------
+def anagram_checker():
+    animated_title("🔁 Anagram Checker")
+    s1 = st.text_input("Enter the first word or sentence:")
+    s2 = st.text_input("Enter the second word or sentence:")
+
+    def clean_string(s):
+        return ''.join(s.lower().split())
+
+    if st.button("Check Anagram"):
+        cleaned_s1 = clean_string(s1)
+        cleaned_s2 = clean_string(s2)
+        if Counter(cleaned_s1) == Counter(cleaned_s2):
+            st.success("🎉 They are anagrams!")
+        else:
+            st.error("❌ Not anagrams")
+
+# ---------------- Palindrome Checker ----------------
 def palindrome_checker():
     animated_title("🔍 Palindrome Checker")
     user_input = st.text_input("Enter a sentence or word:")
@@ -18,7 +38,7 @@ def palindrome_checker():
         else:
             st.error("❌ Not a palindrome.")
 
-# Sliding Window Visualizer
+# ---------------- Sliding Window Visualizer ----------------
 def sliding_window_visualizer():
     animated_title("🪟 Sliding Window Visualizer")
 
@@ -52,21 +72,21 @@ def sliding_window_visualizer():
                     window = user_input[i:i+k]
                     st.success(f"Window [{i}:{i+k}] → \"{window}\"")
 
-# -----------------------------
-
-# Sidebar navigation
+# ---------------- Sidebar Navigation ----------------
 st.sidebar.title("🚀 Navigation")
 option = st.sidebar.selectbox(
     "Choose an App:",
-    ("Sliding Window Visualizer", "Palindrome Checker")
+    ("Sliding Window Visualizer", "Palindrome Checker", "Anagram Checker")
 )
 
-# Main app
+# ---------------- Run selected section ----------------
 if option == "Sliding Window Visualizer":
     sliding_window_visualizer()
-else:
+elif option == "Palindrome Checker":
     palindrome_checker()
+else:
+    anagram_checker()
 
-# Footer
+# ---------------- Footer ----------------
 st.markdown("---")
 st.markdown("<h6 style='text-align: center;'>#DasariSriRanjani</h6>", unsafe_allow_html=True)
