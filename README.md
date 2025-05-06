@@ -10,15 +10,13 @@ Each tool is designed to help understand and visualize logic in a user-friendly 
 
 ---
 
-## 📸 Demo
 
-![App Demo](https://your-demo-link-or-gif-if-any)
 
 ---
 
-## 🚀 Live Demo
+ 🚀 Live Demo
 
-👉 [Streamlit Cloud App](https://your-deployed-url.streamlit.app)
+👉 [Streamlit Cloud App]([(https://ultimate-visualizer-y4kvaqybhkwwsqydvsvy2t.streamlit.app/))
 
 ---
 
@@ -37,10 +35,6 @@ Each tool is designed to help understand and visualize logic in a user-friendly 
 - Compares two strings to check if they are anagrams.
 - Ignores spaces and capitalization.
 
----
 
-## 📦 Installation
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/
+
