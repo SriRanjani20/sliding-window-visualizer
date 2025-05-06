@@ -14,9 +14,9 @@ Each tool is designed to help understand and visualize logic in a user-friendly 
 
 ---
 
- 🚀 Live Demo
+## 🚀 Live Demo
 
-👉 [Streamlit Cloud App]([(https://ultimate-visualizer-y4kvaqybhkwwsqydvsvy2t.streamlit.app/))
+👉 [Streamlit Cloud App](https://ultimate-visualizer-y4kvaqybhkwwsqydvsvy2t.streamlit.app/)
 
 ---
 
